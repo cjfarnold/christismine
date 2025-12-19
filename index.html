@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChristIsMine</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-left">
+          <h3>About This Site</h3>
+          <p>
+            This website was developed by <strong>TrueVine.in</strong> to
+            provide an easy way to browse YouTube channel content with speed and
+            simplicity.
+          </p>
+        </div>
+
+        <div class="footer-contact">
+          <h3>Contact</h3>
+          <p>
+            Email:
+            <a href="mailto:sales@truvine.in">sales@truvine.in</a>
+          </p>
+        </div>
+
+        <div class="footer-social">
+          <h3>Follow</h3>
+          <p>If you like the poetries subscribe to my youtube channel:</p>
+          <div class="footer-icons">
+            <a
+              href="https://www.youtube.com/@ChristIsMine_Jac/shorts"
+              target="_blank"
+              class="icon"
+            >
+              <!-- YouTube icon -->
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M23.5 6.2s-.2-1.7-.9-2.4c-.8-.9-1.6-.9-2-1C17.3 2.5 12 2.5 12 2.5h-.1s-5.3 0-8.6.3c-.4.1-1.2.1-2 1C.7 4.5.5 6.2.5 6.2S0 8.1 0 10v2c0 1.9.5 3.8.5 3.8s.2 1.7.9 2.4c.8.9 1.8.9 2.2 1 1.6.2 6.8.3 8.4.3h.2c0 0 5.3 0 8.6-.3.4-.1 1.2-.1 2-1 .7-.7.9-2.4.9-2.4s.5-1.9.5-3.8v-2c0-1.9-.5-3.8-.5-3.8zM9.8 15.3V8.7l6.2 3.3-6.2 3.3z"
+                />
+              </svg>
+            </a>
+            <!--
+            <a href="https://yourwebsite.com" target="_blank" class="icon">
+
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 2a10 10 0 100 20 10 10 0 000-20zm7.9 9h-3.2a15.3 15.3 0 00-1.1-5 8.1 8.1 0 014.3 5zM12 4a13.4 13.4 0 011.4 7H10.6A13.4 13.4 0 0112 4zm-2.6.2a15.3 15.3 0 00-1.1 4.8H5.1a8.1 8.1 0 014.3-4.8zM4.1 13h3.2c.2 1.8.7 3.5 1.1 5a8.1 8.1 0 01-4.3-5zm5.9 0h4A13.4 13.4 0 0112 20a13.4 13.4 0 01-2-7zm5.5 5c.4-1.5.9-3.1 1.1-5h3.2a8.1 8.1 0 01-4.3 5z"
+                />
+              </svg>
+            </a>
+-->
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © <span id="year"></span> Jacqueline Arnold — All Rights Reserved
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
