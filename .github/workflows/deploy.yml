@@ -27,15 +27,13 @@ jobs:
           python-version: "3.10"
 
       - name: Install dependencies
-        run: |
-          pip install requests
+        run: pip install requests
 
       - name: Run fetch_videos.py
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
           CHANNEL_ID: ${{ secrets.CHANNEL_ID }}
-        run: |
-          python fetch_videos.py
+        run: python fetch_videos.py
 
       - name: Commit and push updates
         run: |
@@ -50,8 +48,8 @@ jobs:
             echo "No changes to commit."
           fi
 
-  deploy:
-    name: Deploy static site to GitHub Pages
+  build-react:
+    name: Build React App
     runs-on: ubuntu-latest
     needs: update-videos
 
@@ -59,13 +57,35 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
-          path: "."  # Deploy entire repo (your static website)
+          node-version: 18
 
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build
+        env:
+          CI: false
+        run: npm run build
+
+      - name: Upload React Build
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./build
+
+  deploy:
+    name: Deploy static site to GitHub Pages
+    runs-on: ubuntu-latest
+    needs: build-react
+
+    # ✅ REQUIRED — this fixes your deployment error
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+
+    steps:
       - name: Deploy to GitHub Pages
+        id: deploy   # IMPORTANT: required for the URL output
         uses: actions/deploy-pages@v4
