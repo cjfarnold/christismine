@@ -73,7 +73,7 @@ jobs:
       - name: Upload React Build
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./build
+          path: ./dist
 
   deploy:
     name: Deploy static site to GitHub Pages
