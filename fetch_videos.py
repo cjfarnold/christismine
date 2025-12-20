@@ -7,8 +7,8 @@ API_KEY = os.environ.get("YOUTUBE_API_KEY")
 CHANNEL_ID = os.environ.get("CHANNEL_ID")
 
 OUTPUT_JSON = Path("public/data/videos.json")
-THUMBS_DIR = Path("public/images/thumbs")
-FULLS_DIR = Path("public/images/fulls")
+THUMBS_DIR = Path("images/thumbs")
+FULLS_DIR = Path("images/fulls")
 
 OUTPUT_JSON.parent.mkdir(exist_ok=True)
 THUMBS_DIR.mkdir(parents=True, exist_ok=True)

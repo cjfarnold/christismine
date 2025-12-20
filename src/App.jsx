@@ -8,7 +8,7 @@ export default function App() {
   const [selected, setSelected] = useState(null);
 
   useEffect(() => {
-    fetch("/data/videos.json")
+    fetch(`${import.meta.env.BASE_URL}data/videos.json`)
       .then((r) => r.json())
       .then((d) => setVideos(d));
   }, []);

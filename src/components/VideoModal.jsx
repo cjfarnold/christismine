@@ -3,7 +3,7 @@ export default function VideoModal({ video, onClose }) {
     <div className="modal-backdrop" onClick={onClose}>
       <div className="modal" onClick={(e) => e.stopPropagation()}>
         <img
-          src={video.fullImage}
+          src={`${import.meta.env.BASE_URL}${video.fullImage}`}
           alt={video.title}
           onClick={() =>
             window.open(`https://www.youtube.com/watch?v=${video.id}`, "_blank")

@@ -1,5 +1,6 @@
 {
-  "name": "truevinepoetry",
+  "name": "christismine",
+  "homepage": "https://cjfarnold.github.io/christismine",
   "private": true,
   "version": "0.0.1",
   "type": "module",
@@ -10,7 +11,8 @@
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^7.11.0"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.2.0",
