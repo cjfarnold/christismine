@@ -8,21 +8,55 @@ body {
 .intro {
   max-width: 900px;
   margin: 40px auto;
-  text-align: center;
   padding: 40px 20px;
   background: linear-gradient(135deg, #1a1a1a, #262626);
   border-radius: 12px;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  text-align: left;
+}
+
+.intro-image {
+  width: 320px;
+  height: 220px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.intro-content {
+  font-family: "Palatino", "Palatino Linotype", "Book Antiqua", serif;
+  flex: 1;
 }
 
 .intro h1 {
+  font-family: "Palatino", "Palatino Linotype", "Book Antiqua", serif;
   font-size: 2.4rem;
   margin-bottom: 10px;
+}
+
+@media (max-width: 700px) {
+  .intro {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .intro-image {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .intro p {
   font-size: 1.1rem;
   line-height: 1.6;
   opacity: 0.9;
+}
+
+/* space between paragraphs */
+.intro p + p {
+  margin-top: 12px;
 }
 
 .intro span {
