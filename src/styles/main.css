@@ -65,6 +65,20 @@ body {
   opacity: 0.8;
 }
 
+/* make links in the intro use the same color as the surrounding intro text */
+.intro a,
+.intro a:link,
+.intro a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+.intro a:hover,
+.intro a:focus {
+  color: inherit;
+  text-decoration: underline;
+}
+
 .grid {
   max-width: 1300px;
   margin: auto;
