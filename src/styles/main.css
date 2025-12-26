@@ -9,7 +9,7 @@ body {
   max-width: 900px;
   margin: 40px auto;
   padding: 40px 20px;
-  background: linear-gradient(135deg, #1a1a1a, #262626);
+  background: transparent; /* match site background */
   border-radius: 12px;
   display: flex;
   gap: 24px;
