@@ -116,10 +116,52 @@ body {
   text-align: center;
 }
 
-.modal img {
+.modal-media {
+  position: relative;
+}
+
+.modal-media img {
   width: 100%;
   border-radius: 8px;
   cursor: pointer;
+  display: block;
+}
+
+.modal-play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,0.45);
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 999px;
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  cursor: pointer;
+  backdrop-filter: blur(3px);
+}
+
+.modal-play svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+.modal-play span {
+  font-weight: 600;
+}
+
+.modal-play:hover {
+  background: rgba(0,0,0,0.6);
+  transform: translate(-50%, -50%) scale(1.02);
+}
+
+.modal-play:focus-visible {
+  outline: 2px solid rgba(255,255,255,0.9);
+  outline-offset: 2px;
 }
 
 
