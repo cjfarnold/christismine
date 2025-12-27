@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Intro from "./components/Intro";
 import VideoGrid from "./components/VideoGrid";
-import VideoModal from "./components/VideoModal";
+//import VideoModal from "./components/VideoModal";
 
 export default function App() {
   const [videos, setVideos] = useState([]);
