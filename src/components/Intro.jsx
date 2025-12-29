@@ -1,6 +1,12 @@
 export default function Intro() {
   return (
     <header className="intro">
+      <img
+        src="/header_img.jpg"
+        alt="Header"
+        className="intro-image"
+        loading="lazy"
+      />
       <div className="intro-content">
         <h1>Dear Reader, Welcome!</h1>
         <p>
@@ -26,12 +32,6 @@ export default function Intro() {
           </a>
         </p>
       </div>
-      <img
-        src="/cropped_circle_image.png"
-        alt="Header"
-        className="intro-image"
-        loading="lazy"
-      />
     </header>
   );
 }
